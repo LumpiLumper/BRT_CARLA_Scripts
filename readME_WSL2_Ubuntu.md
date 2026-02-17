@@ -6,8 +6,8 @@ Open PowerShell as an administrator and run:
 ```bash 
 wsl --install -d Ubuntu-22.04
 ```
-This command will install wsl and automatically make a Ubuntu 22.04 distro.
-After the download of Ubuntu is done, the console will ask you to create a username and password for the automatically created distro. Make sure you choose something that you remeber. After the console will switch to the Ubuntu distro. Your command line will look something like this:
+This command will download Ubuntu 22.04 and automatically make a Ubuntu 22.04 distro.
+After the download of Ubuntu is done, the console will ask you to create a username and password for the automatically created distro. Make sure you choose something that you remeber. After, the console will switch to the Ubuntu distro. Your command line will look something like this:
 ```bash
 User@Computer:/mnt/c/Users/user$
 ```
@@ -20,17 +20,17 @@ you should see something like:
   NAME              STATE           VERSION
 * Ubuntu-22.04      Running         2
 ```
-Make sure the version is 2 and not 1. This means the distro is using WSL2. We need it for compatibility with dockers.
+Make sure the version is 2 and not 1. This means the distro is using WSL2. We need it for compatibility with dockers. If you already installed Docker Desktop you might see a docker-desktop distro.
 
 Then verify what version of Ubuntu was installed. Inside Ubuntu run:
 ```bash
 lsb_release -a
 ```
-If your Ubuntu Terminal is no longer open for some reason you can start is by klicking on the arrows next to the plus to add a new terminal or run:
+If your Ubuntu Terminal is no longer open for some reason, you can start it by klicking on the arrows next to the plus to add a new terminal, or run:
 ```bash
 wsl -p <DistroName> (most likely Ubuntu-22.04)
 ```
-Under Release it should say "22.04". If it says something else go back to PowerShell and run:
+Under Release it should say "22.04". If this is the case, [skip to final check](#final-check). If it says something else go back to PowerShell and run:
 ```bash
 wsl --list --online
 ```
@@ -41,7 +41,7 @@ Ubuntu-22.04
 Ubuntu-20.04
 ...
 ``` 
-Then run
+Then run:
 ```bash
 wsl --install -d Ubuntu-22.04
 ```
@@ -56,9 +56,9 @@ Run in PowerShell:
 ```bash
 wsl -l -v
 ```
-You should only have one Ubuntu distro. If you already installed Docker Desktop you might also have a distro named docker-desktop. Then open the distro with:
+You should only have one Ubuntu distro. If you already installed Docker Desktop you might also have a distro named docker-desktop. Then, open the distro with:
 ```bash
-wsl -p <UbuntuDistroName> 
+wsl -p <DistroName> 
 ```
 Inside run:
 ```bash
