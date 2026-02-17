@@ -49,7 +49,7 @@ you should see something like:
   NAME              STATE           VERSION
 * Ubuntu-22.04      Running         2
 ```
-Make sure the version is 2 and not 1. This means the distro is using WSL2. We need it for compatibility with dockers. If you already installed Docker Desktop you might see a docker-desktop distro.
+Make sure the version is 2 and not 1. This means the distro is using WSL2. We need it for compatibility with dockers. If you already installed Docker Desktop you might also see a docker-desktop distro.
 
 Then verify what version of Ubuntu was installed. Inside Ubuntu run:
 ```bash
@@ -85,7 +85,7 @@ Run in PowerShell:
 ```bash
 wsl -l -v
 ```
-You should see only one Ubuntu distribution with VERSION 2. If you already installed Docker Desktop you might also have a distro named docker-desktop. Then, open the distro with:
+You should see only one Ubuntu distribution with VERSION 2. If you already installed Docker Desktop you might also see a docker-desktop distro. Then, open the distro with:
 ```bash
 wt -p <DistroName> 
 ```
