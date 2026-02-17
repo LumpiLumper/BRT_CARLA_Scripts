@@ -5,6 +5,7 @@ This README explains how to properly install WSL2 and Ubuntu 22.04 for the use i
 ### Operating System
 - Windows 10 (Version 2004 or higher, Build 19041+)
 - Windows 11
+
 To check version:
 ```powershell
 winver
@@ -14,6 +15,7 @@ Your system must support:
 - Virtualization enabled in BIOS
 - Virtual Machine Platform enabled
 - Windows Subsystem for Linux feature enabled
+
 Check if Virual Machine Platform and Windows Subsystem for Linux is enabled with:
 ```powershell
 wsl -l -v
@@ -29,7 +31,6 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 Then check again.
-
 ## Install WSL with command
 Open PowerShell as an administrator and run:
 ```bash 
@@ -40,7 +41,7 @@ After the download of Ubuntu is done, the console will ask you to create a usern
 ```bash
 User@Computer:/mnt/c/Users/user$
 ```
-Now the console is accessing the Ubuntu distro and is no longer PowerShell. Open another PowerShell console and check the distro like this.
+Now the console is accessing the Ubuntu distro and is no longer PowerShell. Open another PowerShell console and check the distro by running:
 ```bash
 wsl -l -v
 ```

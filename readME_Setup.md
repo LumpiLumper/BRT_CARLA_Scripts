@@ -18,8 +18,7 @@ WSL2 (Ubuntu 22.04)
 └─ Python venv (carla-venv)
    └─ Python scripts connecting to 127.0.0.1:2000
 ```
-Docker runs on Windows.
-WSL connects to Docker via Docker Desktop integration.
+Docker runs on Windows. WSL connects to Docker via Docker Desktop integration.
 
 ## Requirements
 - Windows 10/11
@@ -29,7 +28,6 @@ WSL connects to Docker via Docker Desktop integration.
 - Docker Desktop → Settings → Resources → WSL Integration → Ubuntu enabled
 ### Optional (recommended):
 NVIDIA GPU + WSL GPU support
-
 ## Make Setup
 ### Verify Docker Works Inside WSL
 Open Ubuntu(WSL):
@@ -55,6 +53,7 @@ carlasim/carla:0.9.16   ...
 ```
 ### Create and Run the CARLA Container
 Create Container (only once)
+
 without GPU:
 ```bash
 docker run -d --name carla916 \
@@ -76,8 +75,7 @@ Explanation:
 - RenderOffScreen → Headless mode
 - carla-rpc-port=2000 → Default RPC port
 ### Setup Python Virtual Environment (WSL)
-Navigate to where you want the venv to be and
-create venv (first time only)
+Navigate to where you want the venv to be and create venv (first time only)
 ```bash
 python3 -m venv carla-venv
 source carla-venv/bin/activate
@@ -104,12 +102,12 @@ Connected to: TownXX
 docker start carla916
 docker logs -f carla916
 ```
-Wait until CARLA finishes loading
+Wait until CARLA finishes loading.
+
 Now the console will output the logs of the carla container. CARLA is pretty quiet so
 most likely you won't see much written as an output just now. This is expected
 ### Check Ports
-Open another Ubuntu console window and leave the one with the logs open
-Then run in the new console
+Open another Ubuntu console window and leave the one with the logs open. Then run in the new console
 ```bash
 docker ps
 ```
@@ -135,7 +133,6 @@ docker stop carla916
 ## Troubleshooting
 ### Docker not reachable
 → Start Docker Desktop on Windows.
-
 ### Python cannot connect
 Check:
 ```bash
@@ -149,6 +146,7 @@ If you get an error looking something like this:
 RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 ```
 This means the client didn't receive a response from the CARLA server within the set timeout window.
+
 If the ports are exposed and docker is running, the most likely fix is increasing the timeout window of client:
 ```bash
 client.set_timeout(120.0)

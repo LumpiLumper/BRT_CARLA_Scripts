@@ -5,8 +5,7 @@ If you see this in the logs:
 ```bash
 WARNING: lavapipe is not a conformant vulkan implementation
 ```
-CARLA is using CPU-based rendering (software Vulkan), which causes very high CPU usage (e.g., 300–400%).
-GPU acceleration reduces CPU load dramatically and improves simulation performance.
+CARLA is using CPU-based rendering (software Vulkan), which causes very high CPU usage (e.g., 300–400%). GPU acceleration reduces CPU load dramatically and improves simulation performance.
 
 ## Requirements
 1. NVIDIA GPU (RTX / GTX)
@@ -30,7 +29,6 @@ If working, you will see:
 If command not found or no devices appear:
 - Update Windows NVIDIA driver
 - Ensure WSL GPU support is installed
-
 ### Verify Docker can Access GPU
 Inside Ubuntu (WSL):
 ```bash
@@ -41,7 +39,6 @@ If GPU is correctly configured, this will display your GPU information inside a 
 If this fails:
 - Enable GPU support in Docker Desktop settings
 - Restart Docker Desktop
-
 ### Run CARLA with GPU Support:
 Stop existing container:
 ```bash
@@ -68,6 +65,7 @@ After strating the container:
 docker logs -f carla916
 ```
 You should NOT see the lavapipe warning anymore.
+
 Then check GPU usage while CARLA is running:
 ```bash
 nvidia-smi
