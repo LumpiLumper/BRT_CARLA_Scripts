@@ -174,7 +174,7 @@ For GPU acceleration:
 - Enable NVIDIA support in WSL
 - Run container with --gpus all
 
-More Details in GPU Acceleration readME file
+More Details in [GPU Acceleration readME](readME_GPU_Acceleration.md)
 
 ## Full Startup Summary
 1. Start Windows

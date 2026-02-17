@@ -64,4 +64,4 @@ Inside run:
 ```bash
 lsb_release -a
 ```
-if it says "22.04" under Release, your distro is setup correctly. Continue with Setup readME
+if it says "22.04" under Release, your distro is setup correctly. Continue with [Setup readME](readME_Setup.md)
