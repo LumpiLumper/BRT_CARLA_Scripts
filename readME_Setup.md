@@ -66,8 +66,8 @@ Explanation:
 - RenderOffScreen → Headless mode
 - carla-rpc-port=2000 → Default RPC port
 ### Setup Python Virtual Environment (WSL)
-Navigate to where you want the venv to be
-Create venv (first time only)
+Navigate to where you want the venv to be and
+create venv (first time only)
 ```bash
 python3 -m venv carla-venv
 source carla-venv/bin/activate
@@ -118,15 +118,6 @@ make sure scripts use:
 client = carla.Client("127.0.0.1", 2000)
 client.set_timeout(60.0)
 ```
-if you get an error looking something like this:
-```text
-RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
-```
-This means the client didn't receive a response from the CARLA server within the set timeout window.
-If the Daily Workflow was followed without any issues so far, the most likely fix is increasing the timeout window of client:
-```bash
-client.set_timeout(120.0)
-```
 ### Stop CARLA
 ```bash
 docker stop carla916
@@ -143,6 +134,15 @@ ss -lin | grep 2000
 ```
 Ensure ports are exposed and container is running.
 
+If you get an error looking something like this:
+```text
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+```
+This means the client didn't receive a response from the CARLA server within the set timeout window.
+If the Daily Workflow was followed without any issues so far, the most likely fix is increasing the timeout window of client:
+```bash
+client.set_timeout(120.0)
+```
 ### High CPU Usage in Docker Desktop
 In Docker Desktop the procentage seen under CPU(%) means how much of a CPU core is used by
 the container.
