@@ -25,7 +25,7 @@ if you see:
 VERSION
 2
 ``` 
-Are enabled, if not, enable required Windows features manually. Open PowerShell as an administrator and run:
+Systems are enabled, if not, enable required Windows features manually. Open PowerShell as an administrator and run:
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
