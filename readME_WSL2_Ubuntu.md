@@ -1,5 +1,34 @@
 # WSL2 Ubuntu (22.04) Installation
-This read me is an instruction how to properly install WSL2 and Ubuntu 22.04 for the use in the BRT-CARLA setup. (for Windows 10/11)
+This README explains how to properly install WSL2 and Ubuntu 22.04 for the use in the BRT-CARLA setup. (for Windows 10/11)
+
+## Requirements
+### Operating System
+- Windows 10 (Version 2004 or higher, Build 19041+)
+- Windows 11
+To check version:
+```powershell
+winver
+```
+### WSL2 Support
+Your system must support:
+- Virtualization enabled in BIOS
+- Virtual Machine Platform enabled
+- Windows Subsystem for Linux feature enabled
+Check if Virual Machine Platform and Windows Subsystem for Linux is enabled with:
+```powershell
+wsl -l -v
+```
+if you see:
+```text
+VERSION
+2
+``` 
+Are enabled, if not, enable required Windows features manually. Open PowerShell as an administrator and run:
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+Then check again.
 
 ## Install WSL with command
 Open PowerShell as an administrator and run:
@@ -7,11 +36,11 @@ Open PowerShell as an administrator and run:
 wsl --install -d Ubuntu-22.04
 ```
 This command will download Ubuntu 22.04 and automatically make a Ubuntu 22.04 distro.
-After the download of Ubuntu is done, the console will ask you to create a username and password for the automatically created distro. Make sure you choose something that you remeber. After, the console will switch to the Ubuntu distro. Your command line will look something like this:
+After the download of Ubuntu is done, the console will ask you to create a username and password for the automatically created distro. Make sure you choose a username and password that you remember, because you will need them later for administrative tasks. After, the console will switch to the Ubuntu distro. Your command line will look something like this:
 ```bash
 User@Computer:/mnt/c/Users/user$
 ```
-Now the console is accessesing the Ubuntu distro and is no longer PowerShell. Open another PowerShell console and check the distro like this.
+Now the console is accessing the Ubuntu distro and is no longer PowerShell. Open another PowerShell console and check the distro like this.
 ```bash
 wsl -l -v
 ```
@@ -26,15 +55,15 @@ Then verify what version of Ubuntu was installed. Inside Ubuntu run:
 ```bash
 lsb_release -a
 ```
-If your Ubuntu Terminal is no longer open for some reason, you can start it by klicking on the arrows next to the plus to add a new terminal, or run:
+If your Ubuntu Terminal is no longer open for some reason, you can start it by clicking on the arrows next to the plus to add a new terminal, or run:
 ```bash
-wsl -p <DistroName> (most likely Ubuntu-22.04)
+wt -p <DistroName> (most likely Ubuntu-22.04)
 ```
 Under Release it should say "22.04". If this is the case, [skip to final check](#final-check). If it says something else go back to PowerShell and run:
 ```bash
 wsl --list --online
 ```
-This will list all avalible Ubuntu versions
+This will list all available Ubuntu versions
 ```text
 Ubuntu
 Ubuntu-22.04
@@ -49,16 +78,16 @@ Do the check again and make sure you only keep the distro that is 22.04. Remove 
 ```bash
 wsl --unregister <DistroName>
 ```
-WARNING: This permanently deletes distro.
+WARNING: This permanently deletes the selected distribution and all its data.
 
 ## Final Check
 Run in PowerShell:
 ```bash
 wsl -l -v
 ```
-You should only have one Ubuntu distro. If you already installed Docker Desktop you might also have a distro named docker-desktop. Then, open the distro with:
+You should see only one Ubuntu distribution with VERSION 2. If you already installed Docker Desktop you might also have a distro named docker-desktop. Then, open the distro with:
 ```bash
-wsl -p <DistroName> 
+wt -p <DistroName> 
 ```
 Inside run:
 ```bash
