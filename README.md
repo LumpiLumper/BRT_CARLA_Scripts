@@ -18,4 +18,4 @@ BRT_CARLA_Scripts
             └─ experiment2.py (experiment by team member Y)
         └─ ...
 ```
-If contrutors have a test/experiment that they want to add to the repo they should always make a new folder inside BRT_code that has a meaningfull name for the experiment or test. Put the file or files for the experiment in the folder. Don't make experiments/tests directily in BRT_CARLA_Scrips. Keep the repo organized! If needed update .gitignore!
+If contrutors have a test/experiment that they want to add to the repo they should always make a new folder inside BRT_code that has a meaningfull name for the experiment or test. Put the corresponding file or files in the new folder. Don't make experiments/tests directily in BRT_CARLA_Scrips. Keep the repo organized! If needed update .gitignore!
