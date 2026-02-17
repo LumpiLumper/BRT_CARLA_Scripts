@@ -28,6 +28,11 @@ Docker runs on Windows. WSL connects to Docker via Docker Desktop integration.
 - Docker Desktop → Settings → Resources → WSL Integration → Ubuntu enabled
 ### Optional (recommended):
 NVIDIA GPU + WSL GPU support
+### Recommended Resources:
+- 16GB RAM minimum
+- 30GB free disk space
+- 4+ CPU cores
+- NVIDIA GPU recommended
 ## Make Setup
 ### Verify Docker Works Inside WSL
 Open Ubuntu(WSL):
@@ -173,6 +178,13 @@ For GPU acceleration:
 - Run container with --gpus all
 
 More Details in [GPU Acceleration readME](readME_GPU_Acceleration.md)
+
+## Common Pitfalls
+
+- Docker Desktop must be running BEFORE WSL tries to use Docker
+- First startup of CARLA can take several minutes
+- Port 2000 must not be blocked by firewall
+- WSL must have Docker integration enabled
 
 ## Full Startup Summary
 1. Start Windows
