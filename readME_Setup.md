@@ -43,6 +43,8 @@ Start Docker Desktop on Windows.
 ```bash
 docker pull carlasim/carla:0.9.16
 ```
+This downloads CARLA Docker Image. (Download ~16GB; Effective diskspace used ~30GB)
+
 Verify:
 ```bash
 docker images | grep carla
