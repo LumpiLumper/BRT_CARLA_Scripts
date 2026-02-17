@@ -1,0 +1,4 @@
+*.npy
+*.ply
+*.json
+*.pcd
