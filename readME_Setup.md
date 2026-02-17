@@ -23,11 +23,11 @@ WSL connects to Docker via Docker Desktop integration.
 
 ## Requirements
 ### Windows
-Windows 10/11
-WSL2 installed
-Ubuntu 22.04 installed in WSL
-Docker Desktop installed
-Docker Desktop → Settings → Resources → WSL Integration → Ubuntu enabled
+- Windows 10/11
+- WSL2 installed
+- Ubuntu 22.04 installed in WSL
+- Docker Desktop installed
+- Docker Desktop → Settings → Resources → WSL Integration → Ubuntu enabled
 ### Optional (recommended):
 NVIDIA GPU + WSL GPU support
 
