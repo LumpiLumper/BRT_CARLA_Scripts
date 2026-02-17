@@ -139,7 +139,7 @@ If you get an error looking something like this:
 RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 ```
 This means the client didn't receive a response from the CARLA server within the set timeout window.
-If the Daily Workflow was followed without any issues so far, the most likely fix is increasing the timeout window of client:
+If the ports are exposed and docker is running, the most likely fix is increasing the timeout window of client:
 ```bash
 client.set_timeout(120.0)
 ```
