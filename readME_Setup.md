@@ -22,7 +22,6 @@ Docker runs on Windows.
 WSL connects to Docker via Docker Desktop integration.
 
 ## Requirements
-### Windows
 - Windows 10/11
 - WSL2 installed
 - Ubuntu 22.04 installed in WSL
@@ -49,7 +48,7 @@ Verify:
 docker images | grep carla
 ```
 Expected:
-```bash
+```text
 carlasim/carla:0.9.16   ...
 ```
 ### Create and Run the CARLA Container
