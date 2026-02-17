@@ -54,14 +54,24 @@ Expected:
 carlasim/carla:0.9.16   ...
 ```
 ### Create and Run the CARLA Container
-Create Container (only once):
+Create Container (only once)
+without GPU:
 ```bash
 docker run -d --name carla916 \
   -p 2000-2002:2000-2002 \
   carlasim/carla:0.9.16 \
   bash -lc "./CarlaUE4.sh -RenderOffScreen -carla-rpc-port=2000"
 ```
+with GPU:
+```bash
+docker run -d --name carla916 \
+  --gpus all \
+  -p 2000-2002:2000-2002 \
+  carlasim/carla:0.9.16 \
+  bash -lc "./CarlaUE4.sh -RenderOffScreen -quality-level=Epic -carla-rpc-port=2000"
+```
 Explanation:
+- --gpus all → requests GPU access
 - -p 2000-2002:2000-2002 → Exposes CARLA RPC ports
 - RenderOffScreen → Headless mode
 - carla-rpc-port=2000 → Default RPC port
