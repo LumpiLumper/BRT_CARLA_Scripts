@@ -5,7 +5,7 @@ This Repository is a collection of examples, experiments and default scripts to 
 ```text
 BRT_CARLA_Scripts
     └─ readME's
-    └─ examples_from_carla
+    └─ examples_from_carla (contains example scripts provided by CARLA)
         └─ example1.py
         └─ example2.py
         └─ ...
