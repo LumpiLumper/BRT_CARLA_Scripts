@@ -62,10 +62,10 @@ docker run -d --name carla916 \
   bash -lc "./CarlaUE4.sh -RenderOffScreen -carla-rpc-port=2000"
 ```
 Explanation:
-- p 2000-2002:2000-2002 → Exposes CARLA RPC ports
+- -p 2000-2002:2000-2002 → Exposes CARLA RPC ports
 - RenderOffScreen → Headless mode
-- carla-rpc-port=2000 → Default RPC port$
-### Setup Python Virutal Environment (WSL)
+- carla-rpc-port=2000 → Default RPC port
+### Setup Python Virtual Environment (WSL)
 Navigate to where you want the venv to be
 Create venv (first time only)
 ```bash
@@ -95,12 +95,15 @@ docker start carla916
 docker logs -f carla916
 ```
 Wait until CARLA finishes loading
-
+Now the console will output the logs of the carla container. CARLA is pretty quiet so
+most likely you won't see much written as an output just now. This is expected
 ### Check Ports
+Open another Ubuntu console window and leave the one with the logs open
+Then run in the new console
 ```bash
 docker ps
 ```
-You should see:
+Under PORTS, you should see something like:
 ```bash
 0.0.0.0:2000-2002->2000-2002/tcp
 ```
@@ -108,12 +111,21 @@ You should see:
 Example:
 ```bash
 source path-to-venv/carla-venv/bin/activate
-python your_script.py
+python path-to-script/your_script.py
 ```
 make sure scripts use:
 ```bash
 client = carla.Client("127.0.0.1", 2000)
-clinet.set_timeout(60.0)
+client.set_timeout(60.0)
+```
+if you get an error looking something like this:
+```text
+RuntimeError: time-out of 60000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+```
+This means the client didn't receive a response from the CARLA server within the set timeout window.
+If the Daily Workflow was followed without any issues so far, the most likely fix is increasing the timeout window of client:
+```bash
+client.set_timeout(120.0)
 ```
 ### Stop CARLA
 ```bash
@@ -134,8 +146,8 @@ Ensure ports are exposed and container is running.
 ### High CPU Usage in Docker Desktop
 In Docker Desktop the procentage seen under CPU(%) means how much of a CPU core is used by
 the container.
-100% → 1 CPU core is fully used
-250% → 2.5 CPU cores are used 
+- 100% → 1 CPU core is fully used
+- 250% → 2.5 CPU cores are used 
 
 If you see the carla916 container is using a lot of CPU check what the output is in the terminal afer you run:
 ```bash
