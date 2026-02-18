@@ -42,7 +42,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 Then check again.
-## Install WSL with command
+## Install WSL Ubuntu with command
 Open PowerShell as an administrator and run:
 ```bash 
 wsl --install -d Ubuntu-22.04
