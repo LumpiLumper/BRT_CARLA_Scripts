@@ -53,7 +53,32 @@ uname -m
 ## Setup Ubuntu in UTM
 ### 1. Open UTM
 ### 2. Add a new virtual machine
+Click on plus in top right corner
 ### 3. Choose Virtualize
-<img src="images/UTM_Win_Start.jpeg" width="50%">
-4. (Window: Operating System) Choose Linux
-5. (Window: Hardware) Give the VM a minimum of 4GB of RAM, if your device has 16BG or more you can give it 8GB, CPU
+<img src="images/UTM_Win_Start.jpeg" width="33%">
+
+Click Virtualize
+
+### 4. Choose Linux
+<img src="images/UTM_Win_OS.jpeg" width="33%">
+
+Click Linux
+
+### 5. Hardware
+<img src="images/UTM_Win_Hardware.jpeg" width="33%">
+
+- Give the VM a minimum of 4GB RAM, if your device has 16GB RAM you can increase it to 8GB.
+- Everything else same as seen in image
+
+### 6. Choose Boot Option
+<img src="images/UTM_Win_Boot_Option.jpeg" width="33%">
+
+- Leave Apple virtualization unchecked
+- Choose Boot from ISO image (file you downloaded earlier)
+- Click on Browse... and select the downloaded .iso file you downloaded in the finder
+- Click continue
+
+### 6. Storage
+<img src="images/UTM_Win_Storage.jpeg" width="33%">
+
+By default set to 64GB, leave it like this.
