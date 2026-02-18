@@ -169,5 +169,63 @@ A second window will open in a command line style.
 - Warning will appear. This warning only applies to the virtual disk inside the VM, not to your disk from your real device. You can continue without worries
 
 #### 9. Create User
+<img src="images/UTM_Linux_Setup_create_user.jpeg" width="33%">
 
+- Create a user for your Ubuntu VM
+- You will need the username and password to log into the VM when you start it and when you do administrative tasks. Pick a password thats safe and you remeber.
+- Done
 
+#### 10. Upgrade Ubuntu
+<img src="images/UTM_Linux_Setup_upgrade_ubuntu.png" width="33%">
+
+- You don't need to upgrade, leave as is
+- Done
+
+#### 11. SSH Configuration
+<img src="images/UTM_Linux_Setup_ssh_config.jpeg" width="33%">
+
+- Select install OpenSSH server
+- Done
+
+#### 12. Feature Server Snaps
+<img src="images/UTM_Linux_Setup_feature_snap.jpeg" width="33%">
+
+- You don't need any feature server snaps
+- Done
+
+#### 13. Installation
+<img src="images/UTM_Linux_Setup_installation.png" width="33%">
+
+- An installation window will start
+- Wait until it says Installation complete!
+- Select Reboot
+- Reboot will get stuck because .iso file is still attached
+- Shut down VM with shut down symbol on top left
+
+<img src="images/UTM_Linux_Setup_shutdown_confirmation.jpeg" width="33%">
+
+- Warning will appear
+- Click OK
+
+#### 14. Remove ISO Image
+<img src="images/UTM_Linux_Setup_remove_iso.jpeg" width="33%">
+
+- Choose your VM that you just installed
+- Scroll down and click on CD/DVD
+- Click clear
+- Restart VM by clicking on play symbol
+
+#### 15. Restart VM
+
+- Restart VM by clicking on play symbol
+- A boot image will apear and after it will say Display output is not active
+- Wait for 10 - 20 seconds
+- Terminal will apear
+
+<img src="images/UTM_Linux_Setup_login.jpeg" width="33%">
+
+- Use your username and password to login
+
+<img src="images/UTM_Linux_Setup_remove_iso.jpeg" width="33%">
+
+- Congratulation, you now have a Ubuntu 22.04.5 VM on your macOS!

@@ -2,3 +2,4 @@
 *.ply
 *.json
 *.pcd
+.DS_Store
