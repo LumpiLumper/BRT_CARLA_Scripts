@@ -125,3 +125,32 @@ A second window will open in a command line style.
 
 #### 3. Set Keyboard Setting
 <img src="images/UTM_Linux_Setup_keyboard_setting.jpeg" width="33%">
+
+- navigate to [ Identify Keyboard ] with the arrow keys
+- press ok
+- it will request you to write * on your keyboard (Swiss layout Shift + 3)
+- It will automatically recognize the swiss layout
+- At Variant you can choose what variant of the layout you want (recommended: Switzerland - German/French (Switzerland, no dead keys))
+- navigate to [ Done ] and press enter
+
+#### 4. Choose Installation Type
+<img src="images/UTM_Linux_Setup_installation_type.jpeg" width="33%">
+
+- Choose Ubuntu Server (leave as is)
+- Done
+
+#### 5. Network Configuration
+<img src="images/UTM_Linux_Setup_network_configuration.jpeg.jpeg" width="33%">
+
+- Leave as is
+- Done
+
+#### 6. Proxy Address
+<img src="images/UTM_Linux_Setup_proxy_address.jpeg" width="33%">
+
+- Leave blank
+- Done
+
+#### 7. Ubuntu Config
+
+
