@@ -67,7 +67,7 @@ Then verify what version of Ubuntu was installed. Inside Ubuntu run:
 ```bash
 lsb_release -a
 ```
-If your Ubuntu Terminal is no longer open for some reason, you can start it by clicking on the arrows next to the plus to add a new terminal, or run:
+If your Ubuntu Terminal is no longer open for some reason, you can start it by clicking on the arrows next to the plus to add a new terminal, or in PowerShell run:
 ```bash
 wt -p <DistroName> (most likely Ubuntu-22.04)
 ```
