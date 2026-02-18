@@ -140,7 +140,7 @@ A second window will open in a command line style.
 - Done
 
 #### 5. Network Configuration
-<img src="images/UTM_Linux_Setup_network_configuration.jpeg.jpeg" width="33%">
+<img src="images/UTM_Linux_Setup_network_configuration.sjpeg" width="33%">
 
 - Leave as is
 - Done
