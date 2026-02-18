@@ -53,16 +53,19 @@ uname -m
 ## Setup Ubuntu in UTM
 ### 1. Open UTM
 ### 2. Add a new virtual machine
-Click on plus in top right corner
+<img src="images/UTM_Win_Main_woVM.jpeg" width="33%">
+
+- Click Create a NewVirtual Machine
+
 ### 3. Choose Virtualize
 <img src="images/UTM_Win_Start.jpeg" width="33%">
 
-Click Virtualize
+- Click Virtualize
 
 ### 4. Choose Linux
 <img src="images/UTM_Win_OS.jpeg" width="33%">
 
-Click Linux
+- Click Linux
 
 ### 5. Hardware
 <img src="images/UTM_Win_Hardware.jpeg" width="33%">
@@ -75,10 +78,49 @@ Click Linux
 
 - Leave Apple virtualization unchecked
 - Choose Boot from ISO image (file you downloaded earlier)
-- Click on Browse... and select the downloaded .iso file you downloaded in the finder
+- Click on Browse... and select the .iso file you downloaded in the finder
 - Click continue
 
 ### 6. Storage
 <img src="images/UTM_Win_Storage.jpeg" width="33%">
 
-By default set to 64GB, leave it like this.
+- By default set to 64GB, leave it like this.
+
+### 6. Shared Directory
+<img src="images/UTM_Win_SharedDir.jpeg" width="33%">
+- Don't connect a path, leave it as is.
+
+### 7. Summary
+<img src="images/UTM_Win_Summary.jpeg" width="33%">
+
+- Click save
+
+### 8. See VM in UTM
+<img src="images/UTM_Win_Main_wVM.jpeg" width="33%">
+
+- You will see the new VM on the left
+- It will be called Linux and has the Penguin logo
+- Make sure it's selected (blue) and scroll to bottom
+- Verify CD/DVD is selected and the on the right to it it says the file name
+- the click on the play symbol
+
+### 9. Setup Ubuntu
+A second window will open in a command line style.
+
+<img src="images/UTM_Linux_Setup_Start.jpeg" width="33%">
+
+- Press enter on Try or Install Ubuntu Server
+- Wait for it to load
+
+### 10. Select language
+<img src="images/UTM_Linux_Setup_select_lanuage.jpeg" width="33%">
+
+- choose whatever language you like, BUT all BRT documentation will be with english language
+
+### 11. Update Request
+<img src="images/UTM_Linux_Setup_update_request.jpeg" width="33%">
+
+- Select Continue without updating
+
+### 12. Set Keyboard Setting
+<img src="images/UTM_Linux_Setup_keyboard_setting.jpeg" width="33%">
