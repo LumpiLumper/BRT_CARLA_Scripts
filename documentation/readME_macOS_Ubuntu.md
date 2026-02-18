@@ -54,6 +54,6 @@ uname -m
 ### 1. Open UTM
 ### 2. Add a new virtual machine
 ### 3. Choose Virtualize
-<img src="images/screen.png" width="50%">
+<img src="images/UTM_Win_Start.jpeg" width="50%">
 4. (Window: Operating System) Choose Linux
 5. (Window: Hardware) Give the VM a minimum of 4GB of RAM, if your device has 16BG or more you can give it 8GB, CPU
