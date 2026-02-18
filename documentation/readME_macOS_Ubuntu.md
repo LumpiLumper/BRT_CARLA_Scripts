@@ -152,5 +152,22 @@ A second window will open in a command line style.
 - Done
 
 #### 7. Ubuntu Config
+<img src="images/UTM_Linux_Setup_ubuntu_config.jpeg" width="33%">
+
+- Will load some packages
+- when it says Reading package list... ; Select Done
+
+#### 8. Storage Config
+<img src="images/UTM_Linux_Setup_storage_config.jpeg" width="33%">
+
+- Leave as is
+- Done
+
+<img src="images/UTM_Linux_Setup_file_system_summary.jpeg" width="33%">
+
+- Done
+- Warning will appear. This warning only applies to the virtual disk inside the VM, not to your disk from your real device. You can continue without worries
+
+#### 9. Create User
 
 
