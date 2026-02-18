@@ -5,7 +5,7 @@ This Repository is a collection of examples, experiments and default scripts to 
 ```text
 BRT_CARLA_Scripts
 │
-├── READMEs/                    # Documentation and setup guides
+├── documentation/              # Documentation and setup guides
 │
 ├── examples_from_carla/        # Official example scripts from CARLA
 │   ├── example1.py
@@ -28,5 +28,5 @@ If contrutors have a test/experiment that they want to add to the repo they shou
 
 For setup checkout:
 - [readME_WSL2_Ubuntu](documentation/readME_WSL2_Ubuntu.md)
-- [readME_Setup](documentation/readME.md)
+- [readME_Setup](documentation/readME_Setup.md)
 - [readME_GPU_Acceleration](documentation/readME_GPU_Acceleration.md)
