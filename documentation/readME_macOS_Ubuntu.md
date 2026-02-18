@@ -226,6 +226,6 @@ A second window will open in a command line style.
 
 - Use your username and password to login
 
-<img src="images/UTM_Linux_Setup_remove_iso.jpeg" width="33%">
+<img src="images/UTM_Linux_Setup_after_login_screen.jpeg" width="33%">
 
 - Congratulation, you now have a Ubuntu 22.04.5 VM on your macOS!
