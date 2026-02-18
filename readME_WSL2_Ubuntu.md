@@ -16,16 +16,27 @@ Your system must support:
 - Virtual Machine Platform enabled
 - Windows Subsystem for Linux feature enabled
 
-Check if Virual Machine Platform and Windows Subsystem for Linux is enabled with:
+Check if WSL is installed:
 ```powershell
-wsl -l -v
+wsl --status
 ```
-if you see:
+If wsl is installed you will see a default version message like:
 ```text
-VERSION
-2
-``` 
-Systems are enabled, if not, enable required Windows features manually. Open PowerShell as an administrator and run:
+Default Version: 2
+or
+Default Version: 1
+```
+If Default Version is 1, change it by running:
+```powershell
+wsl --set-default-version 2
+```
+If you don't see any version message, install wsl by running:
+```powershell
+wsl --install
+```
+Then check that default version is 2.
+
+If you still don't see a version message after installing wsl with the command, enable required Windows features manually. Open PowerShell as an administrator and run:
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
