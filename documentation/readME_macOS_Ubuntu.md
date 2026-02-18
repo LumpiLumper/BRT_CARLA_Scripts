@@ -229,3 +229,33 @@ A second window will open in a command line style.
 <img src="images/UTM_Linux_Setup_after_login_screen.jpeg" width="33%">
 
 - Congratulation, you now have a Ubuntu 22.04.5 VM on your macOS!
+
+### First Steps in Ubuntu
+
+Now you will install everything you need to have a easy to use and BRT-CARLA-Setup compatible Ubuntu Setup
+
+#### Update the system
+Run:
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+A window will promt you what you want to upgrade. Just go down an continue.
+
+Then reboot once:
+```bash
+sudo reboot
+```
+
+#### Setup SSH from Mac terminal into VM
+Now we will make a connection from our Mac terminal into the Virtual Machine. Why? This allows us to access the VM from macOS through the terminal. It makes it much easier because this way you can copy-paste commands from, e.g. this readME, to the VM. It also gives you a better terminal, less RAM usage and therefore a faster VM.
+
+##### Find the VM IP
+Inside Ubuntu VM:
+```bash
+ip a
+```
+Look for something like:
+```bash
+192.16.64x/xx   (e.g. 192.168.64.5/24)
