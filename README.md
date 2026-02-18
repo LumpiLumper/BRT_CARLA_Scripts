@@ -28,5 +28,5 @@ If contrutors have a test/experiment that they want to add to the repo they shou
 
 For setup checkout:
 - [readME_WSL2_Ubuntu](documentation/readME_WSL2_Ubuntu.md)
-- [readME_Setup](readME.md)
-- [readME_GPU_Acceleration](readME_GPU_Acceleration.md)
+- [readME_Setup](documentation/readME.md)
+- [readME_GPU_Acceleration](documentation/readME_GPU_Acceleration.md)
